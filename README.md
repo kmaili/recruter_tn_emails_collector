@@ -10,8 +10,8 @@ A tool for collecting recruiter emails from various sources for networking and j
 ## Installation
 
 ```bash
-git clone https://github.com/yourusername/recruter-email-collect.git
-cd recruter-email-collect
+git clone https://github.com/kmaili/recruter_tn_emails_collector
+cd recruter_tn_emails_collector
 pip install -r requirements.txt
 ```
 
