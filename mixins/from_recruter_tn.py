@@ -9,7 +9,7 @@ class FromRecruterTnMixin:
     def _extract_data(self, pages=10):
         current_page = 1
         while True:
-            max_num_pages, search_results_links = self._get_results_links(search_query=self.keywords, page=1)
+            max_num_pages, search_results_links = self._get_results_links(search_query=self.keywords, page=current_page)
             print(f"Processing page {current_page} of {max_num_pages}")
             if current_page > max_num_pages:
                 break
@@ -37,7 +37,7 @@ class FromRecruterTnMixin:
             'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
             'Priority': 'u=1, i',
             'X-Requested-With': 'XMLHttpRequest',
-            'Referer': 'https://www.recruter.tn/?search_keywords=angular&search_location'
+            'Referer': f'https://www.recruter.tn/?search_keywords={search_query}&search_location'
         }
         data = f'lang=&search_keywords={search_query}&search_location=&per_page=10&orderby=date&order=DESC&page={page}&featured=false&filled=false&show_pagination=true&form_data='
 
